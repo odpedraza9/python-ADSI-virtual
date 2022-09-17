@@ -21,6 +21,7 @@ if 0 < x and x < 10:
 
 if 0 < x < 10:
     print("x es un numero positivo de un solo dígito.")  # recomendable
+<<<<<<< HEAD
 
 """
 """
@@ -52,3 +53,29 @@ if corredor1 < corredor2:
 else:
     print("El corredor 2 es mas rapido que el corredor 1")
 print("el corredor mas rapid tuvo un tiempo de mi,"min(corredor1,corredor2))
+=======
+"""
+
+
+# Ejercicio
+"""El profesor le indica a Diego que durante el curso se sacaron 4 notas y todas tienen el mismo valor. Además le
+solicita que debe elaborar un programa que le ayude a calcular si aprobó o debe recuperar la materia no solo a él
+sino a todos sus compañeros.
+Para esto debe planificar correctamente un código en python que les ayude a automatizar este proceso."""
+nota1= 2.9
+nota2= 2.9
+nota3= 3.0
+nota4= 3.0
+
+promedio= round((nota1+nota2+nota3+nota4)/4,1)
+# promedio= (nota1+nota2+nota3+nota4)/4
+
+if promedio >=3:
+    print(f"Su fue de {promedio}, usted aprobó")
+else:
+    print(f"Su fue de {promedio}, usted reprobó")
+
+
+
+
+>>>>>>> ca7b88f141c145a1aafb9308ad6fd8ec5c6906f0
