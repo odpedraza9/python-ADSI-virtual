@@ -38,6 +38,14 @@ print("modificar:",frutas1)
 
 print("pop:",frutas1.pop(3))
 print(frutas1)
+###################################
+#           recorrerlo     []     #
+###################################
+print("############recorrido lista###############")
+for fruta in frutas1:
+    print(fruta)
+print("###########################")
+
 #Diccionarios
 ###################################
 #           Definición      {}    #
@@ -59,7 +67,13 @@ print("Existe bolsa2","bolsa2" in canasta1)
 
 canasta1["bolsa3"]= False
 print("agregar a diccionario:", canasta1)
-
+###################################
+#           recorrerlo     {}     #
+###################################
+print("############recorrido diccionario###############")
+for key in canasta1:
+    print(key)
+print("###########################")
 #Tuplas
 ###################################
 #           Definición            #
