@@ -35,6 +35,9 @@ print("remover en posición 3:",frutas1[3] )
 frutas1[3]="banano"
 print("modificar:",frutas1)
 
+
+print("pop:",frutas1.pop(3))
+print(frutas1)
 #Diccionarios
 ###################################
 #           Definición      {}    #
@@ -46,6 +49,16 @@ canasta2= dict()
 print("Dicionario:",canasta1["bolsa1"])
 
 print("Dicionario:",canasta1["bolsa1"][2]) #si quisiera acceder a un elemento en especifico de la lista 
+###################################
+#           operaciones    {}     #
+###################################
+print("listar llaves:",canasta1.keys())
+print("listar valores:",canasta1.values())
+print("listarlos tupla:",canasta1.items())
+print("Existe bolsa2","bolsa2" in canasta1)
+
+canasta1["bolsa3"]= False
+print("agregar a diccionario:", canasta1)
 
 #Tuplas
 ###################################
