@@ -1,3 +1,10 @@
+"""
+[] corchetes
+{} llaves
+() parentesis
+<> parentesis angular
+"""
+
 #Listas
 ###################################
 #           Definición      []    #
@@ -13,6 +20,12 @@ frutas2.append("coco")
 frutas2.append("kiwi")
 frutas1.extend(frutas2)
 print("Agregado a lista:",frutas1)
+###################################
+#           operaciones    []     #
+###################################
+print("posición del coco:",frutas1.index("coco")) # devuelve la posición
+
+
 
 #Diccionarios
 ###################################
@@ -31,7 +44,8 @@ print("Dicionario:",canasta1["bolsa1"][2]) #si quisiera acceder a un elemento en
 #           Definición            #
 ###################################
 tiempos=(5,3,4)
-
+t=(1,)
+print("Tipo:",type(t))
 ##################################
 print("Tupla:",tiempos[1])
 
