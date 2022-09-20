@@ -26,6 +26,14 @@ print("Agregado a lista:",frutas1)
 print("posición del coco:",frutas1.index("coco")) # devuelve la posición
 
 
+frutas1.insert(3,"fresa") # ingresar un valor en posición especifica
+print("ingresar en posición 3:",frutas1[3] )
+
+frutas1.remove("fresa")
+print("remover en posición 3:",frutas1[3] )
+
+frutas1[3]="banano"
+print("modificar:",frutas1)
 
 #Diccionarios
 ###################################
