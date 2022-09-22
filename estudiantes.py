@@ -101,3 +101,5 @@ while opcion != "5":
     if opcion == "4":
         titulo("Eliminar Estudiantes")
         eliminar(input("Digite el estudiante.\n"))
+else:
+    print("Hasta la proxima!")
