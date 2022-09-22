@@ -1,14 +1,15 @@
 from tkinter import W
 
 
-estudiantes = {}
+estudiantes = {"123": {"Nombre": "Antony",
+                       "Apellido": "Botello", "Telefono": "3135279210", "Curso": 5}}
 opcion = None
 
 
 def titulo(titulo: str):
     print(f"""########################
 #{titulo}#
-# """)
+######################## """)
 
 
 def agregar(id: str, nombre: str, apellido: str, telefono: str,  curso: int):
@@ -22,24 +23,39 @@ def agregar(id: str, nombre: str, apellido: str, telefono: str,  curso: int):
         curso (int): _description_
     """
     estudiante = {
-        "nombre": nombre,
-        "apellido": apellido,
-        "telefono": telefono,
-        "curso": curso
+        "Nombre": nombre,
+        "Apellido": apellido,
+        "Telefono": telefono,
+        "Curso": curso
     }
-    estudiantes.update({id:estudiante})
+    estudiantes.update({id: estudiante})
+
 
 def mostrar(id):
-    print("########################")
-    print(f"#       id: {id}        #")
-    print("########################\n")
-    print("Nombre:", estudiantes[id]["nombre"])
-    print("Apellido:", estudiantes[id]["apellido"])
-    print("Teléfono:", estudiantes[id]["telefono"], "\n")
-    print("Curso:", estudiantes[id]["curso"])
+    titulo(f"Estudiante {id}")
+    print("Nombre:", estudiantes[id]["Nombre"])
+    print("Apellido:", estudiantes[id]["Apellido"])
+    print("Teléfono:", estudiantes[id]["Telefono"])
+    print("Curso:", estudiantes[id]["Curso"], "\n")
 
     print("########################")
     print("////////////////////////")
+
+
+def actualizar(id, campo, info):
+    if campo in estudiantes[id]:
+        estudiantes[id][campo] = info
+    else:
+        print("El campo no existe.")
+
+def eliminar(id):
+    seguro=input("Esta seguro de eliminar (Y/N)\n")
+    if seguro == "Y" or seguro == "y":
+        aux= estudiantes.pop(id)
+        nombre= aux["Nombre"]
+        print(f"El estudiante {nombre} se eliminó correctamente.")
+    else:
+        print(f"Eliminación cancelada.")
 
 
 while opcion != "5":
@@ -58,21 +74,30 @@ while opcion != "5":
 
         agregar(
             input("Digite el documento\n"),
-            input("Digite el Nombre\n"),
-            input("Digite el Apellido\n"),
+            input("Digite el Nombre\n").capitalize,
+            input("Digite el Apellido\n").capitalize,
             input("Digite el Teléfono\n"),
             int(input("Digite el Curso\n"))
         )
     if opcion == "2":
         titulo("Mostrar Estudiantes")
 
-        sub=None
-        while sub!="3":
+        sub = None
+        while sub != "3":
             print("1. Listar todos.")
             print("2. Buscar por documento.")
             print("3. Volver")
-            if sub=="1":
-                
-
-        for estudiante in estudiantes:
-            mostrar(estudiante)
+            sub = input("Digite la opción:\n")
+            if sub == "1":
+                for estudiante in estudiantes:
+                    mostrar(estudiante)
+            elif sub == "2":
+                mostrar(input("Digite el documento\n"))
+    if opcion == "3":
+        titulo("Actualizar Estudiantes")
+        actualizar(input("Digite el estudiante.\n"),
+                   input("Digite el nombre del campo.\n").capitalize,
+                   input("Digite la actualización.\n").capitalize)
+    if opcion == "4":
+        titulo("Eliminar Estudiantes")
+        eliminar(input("Digite el estudiante.\n"))
