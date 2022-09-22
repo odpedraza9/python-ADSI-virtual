@@ -14,7 +14,6 @@ def titulo(titulo: str):
 
 def agregar(id: str, nombre: str, apellido: str, telefono: str,  curso: int):
     """Función para agregar estudiantes
-
     Args:
         id (str): _description_
         nombre (str): _description_
@@ -87,16 +86,6 @@ while opcion != "5":
             print("1. Listar todos.")
             print("2. Buscar por documento.")
             print("3. Volver")
-<<<<<<< HEAD
-            if sub=="1":
-                
-
-        for estudiante in estudiantes:
-            mostrar(estudiante)
-
-
-
-=======
             sub = input("Digite la opción:\n")
             if sub == "1":
                 for estudiante in estudiantes:
@@ -113,4 +102,3 @@ while opcion != "5":
         eliminar(input("Digite el estudiante.\n"))
 else:
     print("Hasta la proxima!")
->>>>>>> ea6e4e93057250f765cb7f8a86297eff000df57d
